@@ -2,17 +2,16 @@ import { FaPizzaSlice, FaLock, FaCartArrowDown, FaUser, FaSignOutAlt } from "rea
 
 export const Navbar = () => {
     const total = 25000;
-    const token = false; // Cambia a true para ver la otra versión del navbar
+    const token = false;
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                {/* Título */}
+
                 <a className="navbar-brand fw-bold" href="#">
                     Pizzería Mama Mía!
                 </a>
 
-                {/* Botón hamburguesa para móviles */}
                 <button 
                     className="navbar-toggler" 
                     type="button" 
@@ -25,9 +24,7 @@ export const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                {/* Menú de navegación */}
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    {/* Botones a la izquierda */}
                     <div className="navbar-nav me-auto">
                         <a className="nav-link" href="#">
                             <button className="btn btn-outline-light me-2">
@@ -37,7 +34,6 @@ export const Navbar = () => {
                         </a>
                         
                         {token ? (
-                            // Mostrar si está autenticado
                             <>
                                 <a className="nav-link" href="#">
                                     <button className="btn btn-outline-light me-2">
@@ -53,7 +49,6 @@ export const Navbar = () => {
                                 </a>
                             </>
                         ) : (
-                            // Mostrar si no está autenticado
                             <>
                                 <a className="nav-link" href="#">
                                     <button className="btn btn-outline-light me-2">
@@ -71,7 +66,6 @@ export const Navbar = () => {
                         )}
                     </div>
 
-                    {/* Botón de Total a la derecha */}
                     <div className="d-flex">
                         <button className="btn btn-outline-primary">
                             <FaCartArrowDown className="me-2" />
